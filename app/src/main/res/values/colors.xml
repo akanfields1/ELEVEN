@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="void_black">#050505</color>
+    <color name="panel_black">#101010</color>
+    <color name="panel_black_2">#181818</color>
+    <color name="cyber_yellow">#FFD600</color>
+    <color name="cyber_yellow_dim">#9E8500</color>
+    <color name="white">#F5F5F5</color>
+    <color name="muted">#8B8B8B</color>
+    <color name="danger">#FFB300</color>
+</resources>
