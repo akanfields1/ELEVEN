@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/void_black"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="18dp"
+        android:paddingTop="18dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="28dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:letterSpacing="0.12"
+                    android:text="ELEVEN"
+                    android:textColor="@color/cyber_yellow"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text="AUDIO BOOSTER // V1"
+                    android:textColor="@color/muted"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/statusBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/panel"
+                android:fontFamily="monospace"
+                android:paddingStart="10dp"
+                android:paddingTop="7dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="7dp"
+                android:text="ENGINE // STANDBY"
+                android:textColor="@color/cyber_yellow"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="14dp"
+            android:background="@color/cyber_yellow" />
+
+        <com.example.eleven.BoostDialView
+            android:id="@+id/boostDial"
+            android:layout_width="match_parent"
+            android:layout_height="310dp"
+            android:layout_marginTop="14dp" />
+
+        <SeekBar
+            android:id="@+id/boostSeek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="25"
+            android:progressTint="@color/cyber_yellow"
+            android:thumbTint="@color/cyber_yellow" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="monospace"
+                android:text="100% // CLEAN"
+                android:textColor="@color/muted"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="200% // MAX"
+                android:textColor="@color/muted"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/panel"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="monospace"
+                    android:text="SYSTEM VOLUME"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/systemVolumeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text="--%"
+                    android:textColor="@color/cyber_yellow"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/systemVolumeSeek"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:progressTint="@color/cyber_yellow"
+                android:thumbTint="@color/cyber_yellow" />
+        </LinearLayout>
+
+        <GridLayout
+            android:id="@+id/presetGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:alignmentMode="alignMargins"
+            android:columnCount="3"
+            android:rowCount="2"
+            android:useDefaultMargins="true">
+
+            <Button
+                android:id="@+id/presetMute"
+                style="?android:attr/buttonStyle"
+                android:layout_width="0dp"
+                android:layout_height="58dp"
+                android:layout_columnWeight="1"
+                android:background="@drawable/button_dark"
+                android:fontFamily="sans-serif-condensed"
+                android:text="MUTE"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/preset100"
+                style="?android:attr/buttonStyle"
+                android:layout_width="0dp"
+                android:layout_height="58dp"
+                android:layout_columnWeight="1"
+                android:background="@drawable/button_dark"
+                android:fontFamily="sans-serif-condensed"
+                android:text="100%"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/preset125"
+                style="?android:attr/buttonStyle"
+                android:layout_width="0dp"
+                android:layout_height="58dp"
+                android:layout_columnWeight="1"
+                android:background="@drawable/button_dark"
+                android:fontFamily="sans-serif-condensed"
+                android:text="125%"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/preset150"
+                style="?android:attr/buttonStyle"
+                android:layout_width="0dp"
+                android:layout_height="58dp"
+                android:layout_columnWeight="1"
+                android:background="@drawable/button_dark"
+                android:fontFamily="sans-serif-condensed"
+                android:text="150%"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/preset175"
+                style="?android:attr/buttonStyle"
+                android:layout_width="0dp"
+                android:layout_height="58dp"
+                android:layout_columnWeight="1"
+                android:background="@drawable/button_dark"
+                android:fontFamily="sans-serif-condensed"
+                android:text="175%"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/presetMax"
+                style="?android:attr/buttonStyle"
+                android:layout_width="0dp"
+                android:layout_height="58dp"
+                android:layout_columnWeight="1"
+                android:background="@drawable/button_dark"
+                android:fontFamily="sans-serif-condensed"
+                android:text="MAX"
+                android:textColor="@color/cyber_yellow"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </GridLayout>
+
+        <Button
+            android:id="@+id/engageButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/button_yellow"
+            android:fontFamily="sans-serif-condensed"
+            android:letterSpacing="0.08"
+            android:text="ENGAGE BOOST"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="NO ADS // NO TRACKING // NO NETWORK
+High boost may cause clipping and can damage hearing or speakers."
+            android:textColor="@color/muted"
+            android:textSize="9sp" />
+
+    </LinearLayout>
+</ScrollView>
