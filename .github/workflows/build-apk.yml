@@ -4,6 +4,8 @@ on:
   workflow_dispatch:
   push:
     branches: [ "main" ]
+  schedule:
+    - cron: "23 5 * * 1"
 
 jobs:
   build:
@@ -18,6 +20,19 @@ jobs:
           distribution: temurin
           java-version: "17"
 
+      - name: Restore stable debug signer
+        id: signer-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.android/debug.keystore
+          key: eleven-debug-signer-v1
+
+      - name: Create signer on first run
+        if: steps.signer-cache.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p ~/.android
+          keytool -genkeypair             -keystore ~/.android/debug.keystore             -storepass android             -alias androiddebugkey             -keypass android             -keyalg RSA             -keysize 2048             -validity 10000             -dname "CN=Android Debug,O=Android,C=US"
+
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
@@ -29,5 +44,6 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: ELEVEN-debug-apk
+          name: ELEVEN-stable-debug-apk
           path: app/build/outputs/apk/debug/app-debug.apk
+          retention-days: 90
