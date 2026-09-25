@@ -2,7 +2,7 @@
 <resources>
     <style name="Theme.Eleven" parent="android:style/Theme.Material.NoActionBar">
         <item name="android:fontFamily">sans</item>
-        <item name="android:windowBackground">@color/void_black</item>
+        <item name="android:windowBackground">@drawable/marble_bg</item>
         <item name="android:colorAccent">@color/cyber_yellow</item>
         <item name="android:navigationBarColor">@color/black</item>
         <item name="android:statusBarColor">@color/black</item>
