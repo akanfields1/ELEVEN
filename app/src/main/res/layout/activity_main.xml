@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/void_black"
+    android:background="@drawable/marble_bg"
     android:fillViewport="true">
 
     <LinearLayout
@@ -40,7 +40,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="monospace"
-                    android:text="AUDIO BOOSTER // V1"
+                    android:text="BLACK GOLD EDITION"
                     android:textColor="@color/muted"
                     android:textSize="11sp" />
             </LinearLayout>
@@ -79,7 +79,7 @@
             android:max="100"
             android:progress="25"
             android:progressTint="@color/cyber_yellow"
-            android:thumbTint="@color/cyber_yellow" />
+            android:thumbTint="@color/danger" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -146,7 +146,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:progressTint="@color/cyber_yellow"
-                android:thumbTint="@color/cyber_yellow" />
+                android:thumbTint="@color/danger" />
         </LinearLayout>
 
         <GridLayout
@@ -252,8 +252,7 @@
             android:layout_marginTop="12dp"
             android:fontFamily="monospace"
             android:gravity="center"
-            android:text="NO ADS // NO TRACKING // NO NETWORK
-High boost may cause clipping and can damage hearing or speakers."
+            android:text="NO ADS // NO TRACKING // NO NETWORK&#10;High boost may cause clipping and can damage hearing or speakers."
             android:textColor="@color/muted"
             android:textSize="9sp" />
 
