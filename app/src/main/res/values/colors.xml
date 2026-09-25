@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#000000</color>
-    <color name="void_black">#050505</color>
-    <color name="panel_black">#101010</color>
-    <color name="panel_black_2">#181818</color>
-    <color name="cyber_yellow">#FFD600</color>
-    <color name="cyber_yellow_dim">#9E8500</color>
-    <color name="white">#F5F5F5</color>
-    <color name="muted">#8B8B8B</color>
-    <color name="danger">#FFB300</color>
+    <color name="void_black">#040404</color>
+    <color name="panel_black">#111111</color>
+    <color name="panel_black_2">#191919</color>
+    <color name="cyber_yellow">#D4A21A</color>
+    <color name="cyber_yellow_dim">#6E5310</color>
+    <color name="white">#F3EBD2</color>
+    <color name="muted">#B49E62</color>
+    <color name="danger">#E5C04D</color>
 </resources>
